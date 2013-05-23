@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://danilogr.github.io/blog/sitemap.xml 
