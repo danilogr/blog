@@ -50,13 +50,17 @@
           c.height= iHeight;
           
           setTimeout(draw, 1000, v, ctx);
-     
+          window.fastThreshold = 10
           tracking.Fast.THRESHOLD = 10;
+          var gui = new dat.GUI();
+          gui.add(window, 'fastThreshold', 0, 100).onChange(function(){tracking.Fast.THRESHOLD = window.fastThreshold});
+          
+          
           function draw(v, ctx)
           {
               // updates frame
-              ctx.drawImage(v, 0, 0, 548, 599);
-             
+              ctx.drawImage(v, 0, 0, iWidth, iHeight);
+               
               // finds features using FAST
               // based on https://github.com/eduardolundgren/tracking.js/blob/master/examples/fast.html
               var imageData = ctx.getImageData(0, 0, iWidth, iHeight);
@@ -66,7 +70,8 @@
               for (var i = 0; i < corners.length; i += 2) ctx.fillRect(corners[i], corners[i + 1], 3, 3);
               setTimeout(draw, 20, v, ctx);
           }
-      
+        
+         
       });
     </script>
   </head>
@@ -125,6 +130,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/tracking.js"></script>
+    <script type="text/javascript" src="bootstrap/js/dat.gui.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="ie10-viewport-bug-workaround.js"></script>
   </body>
