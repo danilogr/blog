@@ -1,0 +1,25 @@
+/* based on http://stacktips.com/tutorials/bootstrap/how-to-display-text-overlay-on-a-responsive-image-in-bootstrap */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: inline;
+    background: rgba(0,0,0,0.70)
+}
+
+.caption p {
+    padding: 2px;
+    margin: 0;
+    color: white;
+    
+}
+
+.thumbnail {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 225px;
+}
+
+.pointer {cursor: pointer;}
