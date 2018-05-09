@@ -12,7 +12,10 @@
     padding: 2px;
     margin: 0;
     color: white;
-    
+}
+
+.caption:hover {
+    color: rebeccapurple    
 }
 
 .thumbnail {
@@ -22,4 +25,8 @@
     height: 225px;
 }
 
-.pointer {cursor: pointer;}
+.thumbnail :hover {
+    -webkit-filter: brightness(150%);
+    filter: brightness(150%);
+    cursor: pointer;
+}
