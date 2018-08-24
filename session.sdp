@@ -1,10 +1,19 @@
-v=0
-o=- 1837690942 2 IN IP4 172.20.0.102
-t=0 0
-s=GST2SDP
-m=video 5000 RTP/AVP 96
-c=IN IP4 172.20.0.102
-a=rtpmap:96 H264/90000
-a=framerate:30
-a=fmtp:96 ssrc=1496965894; seqnum-offset=12088;
+v=0
+
+o=- 2542411040 2 IN IP4 172.20.0.103
+
+t=0 0
+
+s=GST2SDP
+
+m=video 5000 RTP/AVP 96
+
+c=IN IP4 172.20.0.103
+
+a=rtpmap:96 H264/90000
+
+a=framerate:30
+
+a=fmtp:96 ssrc=3838385872; seqnum-offset=25056;
+
 a=control:track1
